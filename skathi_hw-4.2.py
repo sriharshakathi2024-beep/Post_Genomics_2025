@@ -8,7 +8,7 @@ fxf_normal = r"C:\Users\skathi\Downloads\Fathm_normal.txt"
 fxf_tumor  = r"C:\Users\skathi\Downloads\Fathm_tumor.txt"
 out_normal = r"C:\Users\skathi\Downloads\Normal_FATHMM_merged.csv"
 out_tumor  = r"C:\Users\skathi\Downloads\Tumor_FATHMM_merged.csv"
-# ------------------------------------
+
 
 def make_key(chrom, pos, ref, alt):
     chrom = str(chrom).replace("chr", "").upper().replace("M","MT")
@@ -38,6 +38,7 @@ def merge_one(snp_csv, fxf_txt, out_csv):
 
 merge_one(snp_normal, fxf_normal, out_normal)
 merge_one(snp_tumor,  fxf_tumor,  out_tumor)
+
 
 
 
