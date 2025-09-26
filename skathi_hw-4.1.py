@@ -5,16 +5,16 @@ import re
 final_normal = pd.read_csv(r"C:\Users\skathi\Downloads\Final_Normal.csv")
 final_tumor  = pd.read_csv(r"C:\Users\skathi\Downloads\Final_Tumor.csv")
 
-# Tag sample type BEFORE merge, then merge
+
 final_normal["Sample_Type"] = "Normal"
 final_tumor["Sample_Type"]  = "Tumor"
 merged = pd.concat([final_normal, final_tumor], ignore_index=True)
 
-# Extract only these columns from the MERGED data
+
 variant_cols = ["chrom", "left", "ref_seq", "alt_seq"]
 variants = merged[variant_cols + ["Sample_Type"]].copy()
 
-# --- helpers ---
+
 CHR_PREFIX = re.compile(r"^(?i:chr)")
 
 def clean_id(x):
@@ -72,6 +72,7 @@ tumor_negative_strand.to_csv(r"C:\Users\skathi\Downloads\tumor_negative_strand.t
                              sep="\t", index=False, header=True)
 
 print("Wrote 4 TSVs to Downloads.")
+
 
 
 
