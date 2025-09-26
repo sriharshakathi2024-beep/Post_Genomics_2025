@@ -5,7 +5,7 @@ orig_normal_csv = r"C:\Users\skathi\Downloads\Final_Normal.csv"
 orig_tumor_csv  = r"C:\Users\skathi\Downloads\Final_Tumor.csv"
 perv_normal_tsv = r"C:\Users\skathi\Downloads\Normal_pervariant.tsv"
 perv_tumor_tsv  = r"C:\Users\skathi\Downloads\Tumor_pervariant.tsv"
-# --------------------------
+
 
 def make_key_from_original(df):
     
@@ -62,6 +62,7 @@ def merge_one(orig_csv, perv_tsv, out_csv):
 
 merge_one(orig_normal_csv, perv_normal_tsv, r"C:\Users\skathi\Downloads\Normal_SNP_merged.csv")
 merge_one(orig_tumor_csv,  perv_tumor_tsv,  r"C:\Users\skathi\Downloads\Tumor_SNP_merged.csv")
+
 
 
 
